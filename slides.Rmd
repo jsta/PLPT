@@ -8,7 +8,7 @@ output: md_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.path = "figures/", dpi=300, fig.height=3, fig.width=3)
 ```
 
 ## Main goals
@@ -155,6 +155,26 @@ are no slides left.
 Documents `slides.Rmd` will be detected.
 
 They will be converted to `slides.md` using either `R`/`knitr`.
+
+## Baseplots
+
+```{r baseplot, dev.args = list(bg = 'transparent')}
+plot(1)
+```
+
+## ggplots
+
+```{r dev.args = list(bg = 'transparent')}
+library(ggplot2)
+
+ggplot() + geom_point(data = mtcars, aes(x = mpg, y = cyl)) + 
+  theme_classic() + 
+  theme(panel.background = element_rect(fill = "transparent"), 
+        plot.background = element_rect(
+          color = "transparent", 
+          fill = "transparent"), 
+        panel.border = element_blank())
+```
 
 # Specific commands
 
