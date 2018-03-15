@@ -96,10 +96,10 @@
 }
 
 \title{Beamer template}
-\subtitle{Using pandoc, knitr, Weave, etc\ldots{}}
+\subtitle{Using pandoc, knitr, but not Jmd}
 \date{\today}
-\author{Timothée Poisot}
-\institute{Université de Montréal}
+\author{Joseph Stachelek}
+\institute{Michigan State University}
 
 \begin{document}
 
@@ -113,7 +113,7 @@
 \item
   Easy generation of slides
 \item
-  Integration with \texttt{R} and \texttt{Julia}
+  Integration with \texttt{R}
 \item
   Looks nice
 \end{enumerate}
@@ -122,17 +122,16 @@
 
 \begin{frame}[fragile]{Fonts and spacing}
 
-The document uses the \alert{Noto} family --
-\url{https://www.google.com/get/noto/}
+The document uses the \alert{Ubuntu} family
 
 \begin{description}
 \tightlist
 \item[Main body]
-Noto Sans (or Serif)
+Ubuntu
 \item[Maths]
-\(\text{Noto Sans}\)
+\(\text{Ubuntu}\)
 \item[Code]
-\texttt{Noto\ Mono}
+\texttt{Ubuntu\ Mono}
 \end{description}
 
 The linespread value has been increased to about \(1.3\)
@@ -237,9 +236,9 @@ There is a customized color scheme for code highlighting.
 \NormalTok{α = }\FloatTok{2.0}
 \NormalTok{b, c = }\StringTok{"abc"}\NormalTok{, }\CharTok{'c'}
 \CommentTok{# This code does nothing (useful)}
-\KeywordTok{for} \NormalTok{i }\KeywordTok{in} \FloatTok{1}\NormalTok{:}\FloatTok{10}
-  \NormalTok{rand()}
-  \NormalTok{@elapsed println(}\StringTok{"i:}\NormalTok{\textbackslash{}t}\StringTok{$i"}\NormalTok{)}
+\KeywordTok{for}\NormalTok{ i }\KeywordTok{in} \FloatTok{1}\NormalTok{:}\FloatTok{10}
+\NormalTok{  rand()}
+\NormalTok{  @elapsed println(}\StringTok{"i:}\NormalTok{\textbackslash{}t}\StringTok{$i"}\NormalTok{)}
 \KeywordTok{end}
 \end{Highlighting}
 \end{Shaded}
@@ -296,10 +295,30 @@ when there are no slides left.
 
 \begin{frame}[fragile]{It's in the Makefile}
 
-Documents \texttt{slides.Jmd} and \texttt{slides.Rmd} will be detected.
+Documents \texttt{slides.Rmd} will be detected.
 
 They will be converted to \texttt{slides.md} using either
-\texttt{R}/\texttt{knitr} or \texttt{Julia}/\texttt{Weave.jl}.
+\texttt{R}/\texttt{knitr}.
+
+\end{frame}
+
+\begin{frame}{Baseplots}
+
+\begin{figure}
+\centering
+\includegraphics{figures/baseplot-1.png}
+\caption{plot of chunk baseplot}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{ggplots}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-1-1.png}
+\caption{plot of chunk unnamed-chunk-1}
+\end{figure}
 
 \end{frame}
 
