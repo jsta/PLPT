@@ -2,14 +2,20 @@
 
 ## System Requirements
 
-### Ubuntu
+### On Ubuntu
 
 ```
 sudo apt-get install latexmk
 sudo apt-get install julia
 ```
 
-## Columns
+## Usage
+
+* Edit `slides.Rmd`
+
+* `make all` _twice if necessary_
+
+### Columns
 
 ~~~ latex
 \begincols
