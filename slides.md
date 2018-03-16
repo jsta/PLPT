@@ -1,29 +1,32 @@
 ---
-title: Beamer template
-subtitle: Using pandoc, knitr, Weave, etc...
-author: Timothée Poisot
-institute: Université de Montréal
+title: "Beamer template"
+subtitle: "Using pandoc, knitr, but not Jmd"
+author: "Joseph Stachelek"
+institute: "Michigan State University"
 date: \today
+output: md_document
 ---
+
+
 
 ## Main goals
 
 1. Easy generation of slides
-2. Integration with `R` and `Julia`
+2. Integration with `R`
 3. Looks nice
 
 ## Fonts and spacing
 
-The document uses the \alert{Noto} family -- <https://www.google.com/get/noto/>
+The document uses the \alert{Ubuntu} family
 
 Main body
-: Noto Sans (or Serif)
+: Ubuntu
 
 Maths
-: $\text{Noto Sans}$
+: $\text{Ubuntu}$
 
 Code
-: `Noto Mono`
+: `Ubuntu Mono`
 
 The linespread value has been increased to about $1.3$
 
@@ -76,6 +79,10 @@ $$
 $$
 
 You can use `\alert` within math blocks.
+
+## Tikz
+
+![Funky tikz](figures/tikz-ex-1.pdf)
 
 # Using sections
 
@@ -147,9 +154,17 @@ are no slides left.
 
 ## It's in the Makefile
 
-Documents `slides.Jmd` and `slides.Rmd` will be detected.
+Documents `slides.Rmd` will be detected.
 
-They will be converted to `slides.md` using either `R`/`knitr` or `Julia`/`Weave.jl`.
+They will be converted to `slides.md` using either `R`/`knitr`.
+
+## Baseplots
+
+![plot of chunk baseplot](figures/baseplot-1.png)
+
+## ggplots
+
+![plot of chunk ggplot](figures/ggplot-1.png)
 
 # Specific commands
 
